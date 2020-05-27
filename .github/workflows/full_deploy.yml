@@ -1,7 +1,7 @@
 name: Studio and Web | Build and Deploy
 on:
-    push:
-      branches: [ master ]
+    repository_dispatch:
+      types: [trigger-first-deploy]  
 jobs:
   studio:
     runs-on: ubuntu-latest
