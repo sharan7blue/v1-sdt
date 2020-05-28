@@ -15,7 +15,7 @@ jobs:
       - name: Build Studio
         run: |
              yarn install
-             yarn run build-studio && cp packages/studio/netlify.toml packages/studio/dist
+             yarn workspace platform-liberty-studio build && cp packages/studio/netlify.toml packages/studio/dist
       - name: Deploy Studio to Netlify
         uses: netlify/actions/cli@master
         env:
@@ -38,7 +38,7 @@ jobs:
             SANITY_DEPLOY_STUDIO_TOKEN: ${{secrets.SANITY_AUTH_TOKEN}}
         run: |
              yarn install
-             yarn run build-web
+             yarn workspace tl-ph build
       - name: Deploy Web to netlify
         uses: netlify/actions/cli@master
         env:
