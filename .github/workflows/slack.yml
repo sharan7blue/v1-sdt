@@ -9,8 +9,8 @@ jobs:
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@v2.0.2
       env:
-        SLACK_WEBHOOK: ${{ https://hooks.slack.com/services/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 }}
-        SLACK_CHANNEL: liberty-frontend
+        SLACK_WEBHOOK: ${{ secrets.https://hooks.slack.com/services/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 }}
+        SLACK_CHANNEL: liberty-frontensecretsd
         SLACK_COLOR: '#3278BD'
         SLACK_ICON: https://github.com/rtCamp.png?size=48
         SLACK_MESSAGE: 'Post Content :rocket:'
