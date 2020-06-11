@@ -41,8 +41,4 @@ jobs:
           - name: Run Structured Data Test
             run: |
                   npm install axe-cli -g
-                  npm install chromedriver –g
-                  npm install --save puppeteer
-                  UPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install puppeteer
-                  npm install -g pa11y-ci
                   axe https://www.nexxus.com/uk/home.html --tags wcag2aa
