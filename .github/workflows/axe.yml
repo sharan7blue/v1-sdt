@@ -39,6 +39,5 @@ jobs:
       steps:
           - name: Run axe Data Test
             run: |
-                 PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install puppeteer
                  npm install pa11y-ci
                  pa11y ${{ needs.deploy_preview.outputs.url }} 
